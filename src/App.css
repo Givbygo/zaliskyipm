@@ -5,6 +5,7 @@
   width: 1000px;
   height: 600px;
   border-radius: 3px;
+  font-family: 'Roboto';
 }
 .App-nav {
   display: flex;
@@ -75,4 +76,82 @@
   padding: 40px;
   color: #adadad;
   max-width: 400px;
+  overflow-y: auto;
+
+  text-align: justify;
+  line-height: 24px;
+  font-size: 15px;
 }
+.App-details::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.App-details::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+.App-details::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #adadad;
+}
+.App-details-title{
+  font-size: 32px;
+  color: white;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+.App-details-title p{
+  font-size: 18px;
+  color: rgb(7,182,121);
+  color: linear-gradient(137deg, rgba(7,182,121,1) 31%, rgba(4,152,98,1) 75%);  
+}
+.App-details-services p{
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+.App-details-services-table{
+  display: flex;
+  flex-direction: column;
+}
+.App-details-services-table-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.App-details-services-table-row p {
+  color:white;
+  font-size: 18px;
+  font-weight: 700;
+}
+.App-details-services-table-row div{
+  padding-right: 15px; 
+  text-align: left;
+}
+.Service-icon{
+  color: rgb(7,182,121);
+  color: linear-gradient(137deg, rgba(7,182,121,1) 31%, rgba(4,152,98,1) 75%);  
+  padding-left: 5px;
+  transform: scale(1.7);
+}
+.App-details-facts-row{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.App-details-facts-row p{
+  font-size: 30px;
+  color: rgb(7,182,121);
+  color: linear-gradient(137deg, rgba(7,182,121,1) 31%, rgba(4,152,98,1) 75%);  
+  margin-bottom: 15px;
+}
+.App-details-fact{
+  font-weight: 700;
+  color: white;
+  font-size: 18px;
+}
+hr{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #adadad;
+}
+
