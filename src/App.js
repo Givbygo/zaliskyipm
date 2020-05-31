@@ -14,39 +14,77 @@ import CountUp from 'react-countup';
 
 class App extends React.Component {
   state={
-    currentpage: "account"
+    currentpage: "account",
+    transition: false
   }
   accountView=()=>{
     this.setState({
-      currentpage: "account"
+      transition: true
     });
+
+    setTimeout(()=>{
+      this.setState({
+        transition: false,
+        currentpage: "account"
+      });
+    },1000);    
   }
   contactView=()=>{
     this.setState({
-      currentpage: "contact"
+      transition: true
     });
+
+    setTimeout(()=>{
+      this.setState({
+        transition: false,
+        currentpage: "contact"
+      });
+    },1000);    
   }
   workView=()=>{
     this.setState({
-      currentpage: "work"
+      transition: true
     });
-  }
 
+    setTimeout(()=>{
+      this.setState({
+        transition: false,
+        currentpage: "work"
+      });
+    },1000);    
+  }
   render(){
+  let appDetails; 
+  if(this.state.currentpage==="account"){
+    appDetails = <AppDetailsAccount/>;
+  } else if(this.state.currentpage==="contact"){
+    appDetails = "none"
+  } else if(this.state.currentpage==="work"){
+    appDetails = "none"
+  }
   return (
       <div className="App-main">
         <div className="App-nav">
           <div className="Nav-upload-container">
             <div><CloudDownloadOutlinedIcon className="Nav-upload"/></div>
           </div>
-          <div className="Nav-icon-container"><AccountCircleOutlinedIcon className="Nav-icon" onClick="this.accountView"/></div>
-          <div className="Nav-icon-container"><ContactPhoneOutlinedIcon className="Nav-icon" onClick="this.contactView"/></div>
-          <div className="Nav-icon-container"><WorkOutlineIcon className="Nav-icon" onClick="this.workView"/></div>
+          <div className="Nav-icon-container"><AccountCircleOutlinedIcon className="Nav-icon" onClick={this.accountView} /></div>
+          <div className="Nav-icon-container"><ContactPhoneOutlinedIcon className="Nav-icon" onClick={this.contactView} /></div>
+          <div className="Nav-icon-container"><WorkOutlineIcon className="Nav-icon" onClick={this.workView}/></div>
         </div>
           <div className="App-photo">
             <div className="App-photo-details"> Bohdan Zaliskyi <p>Project Manager</p></div>
           </div>
-          <div className="App-details">
+          <div className={`App-details ${this.state.transition ? 'transition-fadeout' : 'transition-fadein'}`}>
+            {appDetails}
+          </div>
+      </div> 
+  
+  );
+  }
+}
+function AppDetailsAccount(){
+    return(
           <div className="App-details-overlay">
             <div className="App-details-title">about me<p>27 years / Kyiv / Fulltime or Freelance</p></div>
           Project Manager specialist and Certified PSM I , working 4+ years in IT various innovative markets on Web, Mobile,
@@ -72,11 +110,8 @@ class App extends React.Component {
             <div><VideogameAssetIcon className="Service-icon"/><p>Unity3D </p> Develop Web, Mobile or Desktop Unity application</div>
           </div>
         </div>
-        </div>
-      </div> 
-  
-  );
-  }
+    )    
 }
+
 
 export default App;
