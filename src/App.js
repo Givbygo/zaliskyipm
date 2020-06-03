@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import AppForm from './App-form';
+import AppWork from './App-work';
 
 
 import CloudDownloadOutlinedIcon from '@material-ui/icons/CloudDownloadOutlined';
@@ -20,13 +21,20 @@ import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 
 class App extends React.Component {
   state={
-    currentpage: "account",
-    transition: false
+    account: true,
+    work: false,
+    contact: false,
+    transition: false,
+    currentpage: "account"
   }
   accountView=()=>{
-    if(this.state.currentpage!=="account"){
+    if(!this.state.account){
       this.setState({
-        transition: true
+        transition: true,
+        account: true,
+        work: false,
+        contact: false,
+
       });
   
       setTimeout(()=>{
@@ -38,9 +46,12 @@ class App extends React.Component {
     }
   }
   contactView=()=>{
-    if(this.state.currentpage!=="contact"){
+    if(!this.state.contact){
       this.setState({
-        transition: true
+        transition: true,
+        account: false,
+        work: false,
+        contact: true,
       });
       setTimeout(()=>{
         this.setState({
@@ -51,9 +62,12 @@ class App extends React.Component {
     }
   }
   workView=()=>{
-  if(this.state.currentpage!=="work"){
+  if(!this.state.work){
       this.setState({
-        transition: true
+        transition: true,
+        account: false,
+        work: true,
+        contact: false,
       });
 
       setTimeout(()=>{
@@ -71,7 +85,7 @@ class App extends React.Component {
   } else if(this.state.currentpage==="contact"){
     appDetails = <AppDetailsContact/>;
   } else if(this.state.currentpage==="work"){
-    appDetails = "none"
+    appDetails = <AppDetailsWork/>
   }
   return (
       <div className="App-main">
@@ -79,9 +93,9 @@ class App extends React.Component {
           <div className="Nav-upload-container">
             <div><CloudDownloadOutlinedIcon className="Nav-upload"/></div>
           </div>
-          <div className="Nav-icon-container"><AccountCircleOutlinedIcon className="Nav-icon" onClick={this.accountView} /></div>
-          <div className="Nav-icon-container"><ContactPhoneOutlinedIcon className="Nav-icon" onClick={this.contactView} /></div>
-          <div className="Nav-icon-container"><WorkOutlineIcon className="Nav-icon" onClick={this.workView}/></div>
+          <div className="Nav-icon-container"><AccountCircleOutlinedIcon className={`${this.state.account?'Nav-icon-active':'Nav-icon'}`} onClick={this.accountView} /></div>
+          <div className="Nav-icon-container"><WorkOutlineIcon className={`${this.state.work?'Nav-icon-active':'Nav-icon'}`} onClick={this.workView}/></div>
+          <div className="Nav-icon-container"><ContactPhoneOutlinedIcon className={`${this.state.contact?'Nav-icon-active':'Nav-icon'}`} onClick={this.contactView} /></div>
         </div>
           <div className="App-photo">
             <div className="App-photo-details"> Bohdan Zaliskyi <p>Project Manager</p></div>
@@ -139,6 +153,12 @@ function AppDetailsContact(){
           </div>
         </div>
     )
+}
+
+function AppDetailsWork(){
+  return(
+      <AppWork/>
+  )
 }
 
 

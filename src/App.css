@@ -2,7 +2,7 @@
   background-color: #1d1e20;
   display: flex;
   flex-direction: row;
-  width: 1000px;
+  width: 1100px;
   height: 600px;
   border-radius: 3px;
   font-family: 'Roboto';
@@ -41,6 +41,11 @@
   color: #adadad;
   transform: scale(1.7);
 }
+.Nav-icon-active{
+  color: rgb(7,182,121);
+  color: linear-gradient(137deg, rgba(7,182,121,1) 31%, rgba(4,152,98,1) 75%);  
+  transform: scale(1.7);
+}
 .Nav-icon-container :hover {
   color: rgb(7,182,121);
   color: linear-gradient(137deg, rgba(7,182,121,1) 31%, rgba(4,152,98,1) 75%);  
@@ -76,7 +81,7 @@
   padding: 40px;
   color: #adadad;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   overflow-y: auto;
 
   text-align: justify;
@@ -181,4 +186,19 @@ hr{
 .Contact-form{
   display: flex;
   flex-direction: column;
+}
+.Work-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Work-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Work-image{
+  width: 230px;
+  /* height: 400px; */
+  margin-bottom: 30px; 
 }
