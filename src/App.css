@@ -75,6 +75,7 @@
 .App-details{
   padding: 40px;
   color: #adadad;
+  width: 100%;
   max-width: 400px;
   overflow-y: auto;
 
@@ -161,4 +162,23 @@ hr{
 .transition-fadeout{
   opacity: 0;
   transition: all 250ms linear;
+}
+.App-details-contact-column{
+  display: flex;
+  flex-direction: column;
+}
+.App-details-contact-icon{
+  color: rgb(7,182,121);
+  color: linear-gradient(137deg, rgba(7,182,121,1) 31%, rgba(4,152,98,1) 75%); 
+  margin-top: 20px;
+  margin-right: 30px;
+}
+.App-details-contact-text{
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+.Contact-form{
+  display: flex;
+  flex-direction: column;
 }

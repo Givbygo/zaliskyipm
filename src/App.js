@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import AppForm from './App-form';
+
+
 import CloudDownloadOutlinedIcon from '@material-ui/icons/CloudDownloadOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import ContactPhoneOutlinedIcon from '@material-ui/icons/ContactPhoneOutlined';
@@ -9,6 +12,9 @@ import GroupIcon from '@material-ui/icons/Group';
 import WebIcon from '@material-ui/icons/Web';
 import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 import CountUp from 'react-countup';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
+
 
 
 
@@ -18,47 +24,52 @@ class App extends React.Component {
     transition: false
   }
   accountView=()=>{
-    this.setState({
-      transition: true
-    });
-
-    setTimeout(()=>{
+    if(this.state.currentpage!=="account"){
       this.setState({
-        transition: false,
-        currentpage: "account"
+        transition: true
       });
-    },1000);    
+  
+      setTimeout(()=>{
+        this.setState({
+          transition: false,
+          currentpage: "account"
+        });
+      },800);  
+    }
   }
   contactView=()=>{
-    this.setState({
-      transition: true
-    });
-
-    setTimeout(()=>{
+    if(this.state.currentpage!=="contact"){
       this.setState({
-        transition: false,
-        currentpage: "contact"
+        transition: true
       });
-    },1000);    
+      setTimeout(()=>{
+        this.setState({
+          transition: false,
+          currentpage: "contact"
+        });
+      },800);    
+    }
   }
   workView=()=>{
-    this.setState({
-      transition: true
-    });
-
-    setTimeout(()=>{
+  if(this.state.currentpage!=="work"){
       this.setState({
-        transition: false,
-        currentpage: "work"
+        transition: true
       });
-    },1000);    
-  }
+
+      setTimeout(()=>{
+        this.setState({
+          transition: false,
+          currentpage: "work"
+        });
+      },800);    
+    }
+  } 
   render(){
   let appDetails; 
   if(this.state.currentpage==="account"){
     appDetails = <AppDetailsAccount/>;
   } else if(this.state.currentpage==="contact"){
-    appDetails = "none"
+    appDetails = <AppDetailsContact/>;
   } else if(this.state.currentpage==="work"){
     appDetails = "none"
   }
@@ -85,7 +96,7 @@ class App extends React.Component {
 }
 function AppDetailsAccount(){
     return(
-          <div className="App-details-overlay">
+          <div>
             <div className="App-details-title">about me<p>27 years / Kyiv / Fulltime or Freelance</p></div>
           Project Manager specialist and Certified PSM I , working 4+ years in IT various innovative markets on Web, Mobile,
           VR/AR projects with international clients. Using Agile frameworks, more inclined to Management
@@ -111,6 +122,23 @@ function AppDetailsAccount(){
           </div>
         </div>
     )    
+}
+
+function AppDetailsContact(){
+    return( 
+        <div>
+            <div className="App-details-title">contacts</div>
+            <div className="App-details-contact-column">
+              <div className="App-details-contact-text"><MailOutlineIcon className="App-details-contact-icon"/>bogdanzaliskyi@gmail.com</div>
+              <div className="App-details-contact-text"><RoomOutlinedIcon className="App-details-contact-icon"/>Kyiv, Ukraine</div>
+            </div>
+          <hr/>   
+          <div className="App-details-title">send message</div>
+          <div>
+            <AppForm/>
+          </div>
+        </div>
+    )
 }
 
 
