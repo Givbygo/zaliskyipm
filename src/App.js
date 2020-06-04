@@ -143,7 +143,7 @@ function AppDetailsContact(){
         <div>
             <div className="App-details-title">contacts</div>
             <div className="App-details-contact-column">
-              <div className="App-details-contact-text"><MailOutlineIcon className="App-details-contact-icon"/>bogdanzaliskyi@gmail.com</div>
+              <div className="App-details-contact-text"><MailOutlineIcon className="App-details-contact-icon"/>bogdanzaliskiy@gmail.com</div>
               <div className="App-details-contact-text"><RoomOutlinedIcon className="App-details-contact-icon"/>Kyiv, Ukraine</div>
             </div>
           <hr/>   

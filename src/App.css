@@ -57,6 +57,7 @@
 .App-photo{
   background-color: grey;
   width: 25vw;
+  min-width: 430px;
   position: relative;
   top: -5vw;
   height: 750px;
@@ -199,6 +200,70 @@ hr{
 }
 .Work-image{
   width: 230px;
-  /* height: 400px; */
   margin-bottom: 30px; 
+  border-radius: 2px;
 }
+.Work-div{
+  position: relative;
+  text-align: center;
+  border-top: solid 5px;
+  border-top-color: rgb(7,182,121);
+}
+.Work-blank{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 2px;
+  padding: 5px;
+  color: white;
+}
+@media screen and (max-width: 1140px) {
+  .App-photo{
+    visibility: hidden;
+    width: 0px;
+    min-width: 0px;
+  }
+  .App-main{
+    width:680px;
+  }
+ }
+ @media screen and (max-width: 690px) {
+   .App-photo{
+     visibility: hidden;
+     width: 0px;
+     min-width: 0px;
+   }
+   .App-main{
+     width:400px;
+     overflow: hidden;
+   }
+   .App-nav{
+     width: 50px;
+   }
+   .Nav-upload-container{
+     width: 50px;
+     height: 50px;
+   }
+   .Nav-upload{
+     transform: scale(1.4);
+   }
+   .Nav-icon-container{
+     width: 50px;
+     height: 80px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+   }
+   .App-details-facts-row{
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+   }
+   .Work-container{
+     flex-direction: column;
+   }
+  }
