@@ -87,8 +87,8 @@ class App extends React.Component {
   return (
       <div className="App-main">
         <div className="App-nav">
-        <a href="http://tiny.cc/jhkkqz" alt="link" target="_blank" rel="noopener noreferrer">
-          <div className="Nav-upload-container" href="http://tiny.cc/e05cqz" alt="link" target="_blank" rel="noopener noreferrer">
+        <a href="#" alt="link" target="_blank" rel="noopener noreferrer">
+          <div className="Nav-upload-container" href="#" alt="link" target="_blank" rel="noopener noreferrer">
         
             <div><CloudDownloadOutlinedIcon className="Nav-upload"/></div>
           </div>
