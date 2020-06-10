@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import AppForm from './App-form';
 import AppWork from './App-work';
+import photo from './photo1.jpg';
 
 
 import CloudDownloadOutlinedIcon from '@material-ui/icons/CloudDownloadOutlined';
@@ -97,6 +98,7 @@ class App extends React.Component {
           <div className="Nav-icon-container"><ContactPhoneOutlinedIcon className={`${this.state.contact?'Nav-icon-active':'Nav-icon'}`} onClick={this.contactView} /></div>
         </div>
           <div className="App-photo">
+          <img className="Main-photo" src={photo} alt=""></img>
             <div className="App-photo-details"> Bohdan Zaliskyi <p>Project Manager</p></div>
           </div>
           <div className={`App-details ${this.state.transition ? 'transition-fadeout' : 'transition-fadein'}`}>

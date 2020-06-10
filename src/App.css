@@ -67,13 +67,18 @@
   border-radius: 2px;
 }
 .App-photo-details{
-  margin-bottom: 50px;
+  position: absolute;
+  display: flex;
   font-size: 42px;
   color: white;
   font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
 }
 .App-photo-details p{
-  margin-bottom: 150px;
+  margin-bottom: 20px;
   font-size: 16px;
   color: white;
   font-weight: bold;
@@ -266,4 +271,9 @@ hr{
    .Work-container{
      flex-direction: column;
    }
+  }
+  .Main-photo{
+    display: relative;
+    width: 430px;
+    height: 750px;
   }
