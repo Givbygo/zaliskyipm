@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a5e2db39407822f7589320e6f546b735",
+    "revision": "8e8fb115493788e63e63848bb657eee1",
     "url": "/index.html"
   },
   {
-    "revision": "02b3f2559207f6f337b9",
-    "url": "/static/css/main.af44a255.chunk.css"
+    "revision": "e8a880f8ea2453b0b792",
+    "url": "/static/css/main.9c81c891.chunk.css"
   },
   {
-    "revision": "ce3623605fba287d17a8",
-    "url": "/static/js/2.132bb762.chunk.js"
+    "revision": "7fc38da713cec4ec8be4",
+    "url": "/static/js/2.ad99eb23.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.132bb762.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.ad99eb23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "02b3f2559207f6f337b9",
-    "url": "/static/js/main.1d446023.chunk.js"
+    "revision": "e8a880f8ea2453b0b792",
+    "url": "/static/js/main.a3d32c40.chunk.js"
   },
   {
     "revision": "bb33b7903493a8cd9930",
     "url": "/static/js/runtime-main.d5395674.js"
+  },
+  {
+    "revision": "2ef0e50de5d01dcc2b5ec3f4190aac88",
+    "url": "/static/media/CV_Zaliskyi_PM(2020).2ef0e50d.pdf"
   },
   {
     "revision": "eb18aa272582f40a0ef6c3557d40f8ad",

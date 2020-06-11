@@ -3,6 +3,7 @@ import './App.css';
 import AppForm from './App-form';
 import AppWork from './App-work';
 import photo from './photo1.jpg';
+import pdf from './CV_Zaliskyi_PM(2020).pdf';
 
 
 import CloudDownloadOutlinedIcon from '@material-ui/icons/CloudDownloadOutlined';
@@ -86,13 +87,14 @@ class App extends React.Component {
     appDetails = <AppDetailsWork/>
   }
   return (
-      <div className="App-main">
+    <div>
+      <div className="App-main"> 
         <div className="App-nav">
-        {/* <a href="#" alt="link" target="_blank" rel="noopener noreferrer"> */}
+        <a href={pdf} alt="link" target="_blank" rel="noopener noreferrer">
           <div className="Nav-upload-container">
             <div><CloudDownloadOutlinedIcon className="Nav-upload"/></div>
           </div>
-          {/* </a> */}
+          </a>
           <div className="Nav-icon-container"><AccountCircleOutlinedIcon className={`${this.state.account?'Nav-icon-active':'Nav-icon'}`} onClick={this.accountView} /></div>
           <div className="Nav-icon-container"><WorkOutlineIcon className={`${this.state.work?'Nav-icon-active':'Nav-icon'}`} onClick={this.workView}/></div>
           <div className="Nav-icon-container"><ContactPhoneOutlinedIcon className={`${this.state.contact?'Nav-icon-active':'Nav-icon'}`} onClick={this.contactView} /></div>
@@ -105,6 +107,7 @@ class App extends React.Component {
             {appDetails}
           </div>
       </div> 
+    </div>
   
   );
   }

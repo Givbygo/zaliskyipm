@@ -7,12 +7,27 @@ import erp from './erp.png';
 import game from './game.jpeg';
 import health from './health.jpeg';
 
+
+
 class AppWork extends React.Component{
-    state ={
-        hovered: false
+    state={
+        loaded: false
+    }
+    // setTimeout(()=>{
+    //     this.setState({
+    //     loaded: true
+    //     });
+    // },800);    
+
+    componentDidMount(){
+        this.setState({
+            loaded: true
+        })
     }
     render(){
         return(
+            <div>
+                <div className="loader" style={{ visibility: !this.state.loaded? 'visible': 'hidden'}}></div>
             <div className="Work-container">
                 <div className="Work-column">
                     <div className="Work-div"><img className="Work-image" src={fin} alt="Fin tech, web apps"></img><div className="Work-blank">FinTech</div></div>
@@ -24,6 +39,7 @@ class AppWork extends React.Component{
                     <div className="Work-div"><img className="Work-image" src={game} alt="Entertainment, mobile apps"></img><div className="Work-blank">Entertainment, mobile apps</div></div>
                     <div className="Work-div"><img className="Work-image" src={health} alt="Health care, mobile apps"></img><div className="Work-blank">Health care, mobile apps</div></div>
                 </div>
+            </div>
             </div>
         )
     }
