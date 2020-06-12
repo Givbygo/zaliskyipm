@@ -18,6 +18,8 @@ import CountUp from 'react-countup';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 
+const {useState, useRef} = React;
+
 class App extends React.Component {
   state={
     account: true,
@@ -99,10 +101,7 @@ class App extends React.Component {
           <div className="Nav-icon-container"><WorkOutlineIcon className={`${this.state.work?'Nav-icon-active':'Nav-icon'}`} onClick={this.workView}/></div>
           <div className="Nav-icon-container"><ContactPhoneOutlinedIcon className={`${this.state.contact?'Nav-icon-active':'Nav-icon'}`} onClick={this.contactView} /></div>
         </div>
-          <div className="App-photo">
-          <img className="Main-photo" src={photo} alt=""></img>
-            <div className="App-photo-details"> Bohdan Zaliskyi <p>Project Manager</p></div>
-          </div>
+          <Photo className="photo-container"/>
           <div className={`App-details ${this.state.transition ? 'transition-fadeout' : 'transition-fadein'}`}>
             {appDetails}
           </div>
@@ -112,6 +111,33 @@ class App extends React.Component {
   );
   }
 }
+
+function Photo(){
+  const [loading, setLoading] = useState(true);
+    const counter = useRef(0);
+    const imageLoaded = () => {
+      counter.current += 1;
+      if (counter.current >= 1) {
+        setLoading(false);
+      }
+    }
+    return (
+      <div>
+        <div style={{display: loading ? "block" : "none"}}>
+          <div className="loader"></div>
+        </div>
+        <div style={{display: loading ? "none" : "block"}}>
+          <div className="App-photo">
+            <img className="Main-photo" src={photo} alt="" onLoad={imageLoaded}></img>
+            <div className="App-photo-details"> Bohdan Zaliskyi <p>Project Manager</p></div>
+          </div>
+        </div>
+      </div>
+    )
+}
+
+
+
 function AppDetailsAccount(){
     return(
           <div>

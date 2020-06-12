@@ -324,3 +324,11 @@ hr{
     transform: rotate(360deg);
   }
 }
+
+.loading {
+  background: transparent url('http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif') center no-repeat;
+}
+.photo-container{
+  width: 430px;
+  height: 750px;
+}
