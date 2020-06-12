@@ -101,7 +101,10 @@ class App extends React.Component {
           <div className="Nav-icon-container"><WorkOutlineIcon className={`${this.state.work?'Nav-icon-active':'Nav-icon'}`} onClick={this.workView}/></div>
           <div className="Nav-icon-container"><ContactPhoneOutlinedIcon className={`${this.state.contact?'Nav-icon-active':'Nav-icon'}`} onClick={this.contactView} /></div>
         </div>
-          <Photo className="photo-container"/>
+        <div className="App-photo">
+          <Photo />
+          {/* className="photo-container" */}
+        </div>
           <div className={`App-details ${this.state.transition ? 'transition-fadeout' : 'transition-fadein'}`}>
             {appDetails}
           </div>
@@ -127,10 +130,10 @@ function Photo(){
           <div className="loader"></div>
         </div>
         <div style={{display: loading ? "none" : "block"}}>
-          <div className="App-photo">
+          
             <img className="Main-photo" src={photo} alt="" onLoad={imageLoaded}></img>
             <div className="App-photo-details"> Bohdan Zaliskyi <p>Project Manager</p></div>
-          </div>
+          
         </div>
       </div>
     )

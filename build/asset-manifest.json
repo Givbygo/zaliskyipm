@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e4eb0ed.chunk.css",
-    "main.js": "/static/js/main.ba42ee81.chunk.js",
-    "main.js.map": "/static/js/main.ba42ee81.chunk.js.map",
+    "main.css": "/static/css/main.34f27b5a.chunk.css",
+    "main.js": "/static/js/main.8df7ba0d.chunk.js",
+    "main.js.map": "/static/js/main.8df7ba0d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d5395674.js",
     "runtime-main.js.map": "/static/js/runtime-main.d5395674.js.map",
     "static/js/2.3e6aa17d.chunk.js": "/static/js/2.3e6aa17d.chunk.js",
     "static/js/2.3e6aa17d.chunk.js.map": "/static/js/2.3e6aa17d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.da594930c60af86f903a7825e92457cb.js": "/precache-manifest.da594930c60af86f903a7825e92457cb.js",
+    "precache-manifest.c438f5618e602fa3671ff409a0d5c3f5.js": "/precache-manifest.c438f5618e602fa3671ff409a0d5c3f5.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.4e4eb0ed.chunk.css.map": "/static/css/main.4e4eb0ed.chunk.css.map",
+    "static/css/main.34f27b5a.chunk.css.map": "/static/css/main.34f27b5a.chunk.css.map",
     "static/js/2.3e6aa17d.chunk.js.LICENSE.txt": "/static/js/2.3e6aa17d.chunk.js.LICENSE.txt",
     "static/media/CV_Zaliskyi_PM(2020).pdf": "/static/media/CV_Zaliskyi_PM(2020).2ef0e50d.pdf",
     "static/media/crm.jpg": "/static/media/crm.eb18aa27.jpg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.d5395674.js",
     "static/js/2.3e6aa17d.chunk.js",
-    "static/css/main.4e4eb0ed.chunk.css",
-    "static/js/main.ba42ee81.chunk.js"
+    "static/css/main.34f27b5a.chunk.css",
+    "static/js/main.8df7ba0d.chunk.js"
   ]
 }
